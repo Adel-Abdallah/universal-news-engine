@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Config } from '../types/config';
+import { siteContent } from '../data/siteContent';
 import { UniversalHeader } from './UniversalHeader';
 import { UniversalFooter } from './UniversalFooter';
 import { ThemeSwitcher } from './ThemeSwitcher';
@@ -35,7 +36,7 @@ export function UniversalLayout({ config, children }: UniversalLayoutProps) {
             }} className="desktop-sidebar">
                 <h3 style={{ marginTop: 0 }}>Categories</h3>
                 <ul style={{ listStyle: 'none', padding: 0 }}>
-                    {config.categories?.map(cat => (
+                    {siteContent.categories.map(cat => (
                         <li key={cat} style={{ marginBottom: '0.5rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                             <a
                                 href={`/${toSlug(cat)}?theme=${config.id}`}
@@ -52,12 +53,12 @@ export function UniversalLayout({ config, children }: UniversalLayoutProps) {
                                 compact={true}
                             />
                         </li>
-                    )) || <p>No categories</p>}
+                    ))}
                 </ul>
 
                 <h3 style={{ marginTop: '2rem' }}>Tags</h3>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                    {['Trending', 'New', 'Featured', 'Deep Dive'].map(tag => (
+                    {siteContent.tags.map(tag => (
                         <div key={tag} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                             <span style={{
                                 padding: '0.25rem 0.5rem',
