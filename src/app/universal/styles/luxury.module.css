@@ -1,0 +1,6 @@
+.container {
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+/* Additional specific overrides if needed, but we try to stick to variables */

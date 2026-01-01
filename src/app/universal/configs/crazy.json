@@ -1,0 +1,60 @@
+{
+    "id": "crazy",
+    "title": "CHAOS MODE",
+    "subtitle": "BREAK THE RULES",
+    "style": {
+        "colors": {
+            "primary": "#FFD700",
+            "onPrimary": "#000000",
+            "secondary": "#ff0055",
+            "onSecondary": "#ffffff",
+            "background": "#000000",
+            "text": "#ffffff",
+            "border": "#333333",
+            "cardBg": "#111111"
+        },
+        "typography": {
+            "fontFamily": "Courier New, monospace",
+            "headingsFamily": "Impact, sans-serif"
+        },
+        "shape": {
+            "borderRadius": "0px",
+            "borderWidth": "2px"
+        },
+        "effects": {
+            "shadow": "4px 4px 0 #fff"
+        }
+    },
+    "features": {
+        "hero": true
+    },
+    "header": {
+        "links": [
+            {
+                "label": "NOISE",
+                "href": "/noise"
+            },
+            {
+                "label": "GLITCH",
+                "href": "/glitch"
+            },
+            {
+                "label": "CHAOS",
+                "href": "/chaos"
+            }
+        ],
+        "cartIcon": true
+    },
+    "footer": {
+        "text": "NO RIGHTS RESERVED. DO WHAT YOU WANT.",
+        "links": []
+    },
+    "cardStyle": "bordered",
+    "filterLayout": "sidebar-right",
+    "categories": [
+        "Underground",
+        "Hacking",
+        "Crypto Anarchy",
+        "Cyberpunk"
+    ]
+}

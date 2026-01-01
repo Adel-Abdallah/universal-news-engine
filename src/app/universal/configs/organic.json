@@ -1,0 +1,60 @@
+{
+    "id": "organic",
+    "title": "Zen Garden",
+    "subtitle": "Inner Peace",
+    "style": {
+        "colors": {
+            "primary": "#8c857b",
+            "onPrimary": "#ffffff",
+            "secondary": "#2c2925",
+            "onSecondary": "#ffffff",
+            "background": "#f7f5f2",
+            "text": "#2c2925",
+            "border": "#e6e2dd",
+            "cardBg": "#f7f5f2"
+        },
+        "typography": {
+            "fontFamily": "'Gill Sans', sans-serif",
+            "headingsFamily": "'Gill Sans', sans-serif"
+        },
+        "shape": {
+            "borderRadius": "2rem 5rem 3rem 4rem / 3rem 4rem 2rem 5rem",
+            "borderWidth": "0px"
+        },
+        "effects": {
+            "shadow": "10px 10px 30px #d1cdc8, -10px -10px 30px #ffffff"
+        }
+    },
+    "features": {
+        "hero": true
+    },
+    "header": {
+        "links": [
+            {
+                "label": "Wellness",
+                "href": "/wellness"
+            },
+            {
+                "label": "Living",
+                "href": "/living"
+            },
+            {
+                "label": "Travel",
+                "href": "/travel"
+            }
+        ],
+        "cartIcon": false
+    },
+    "footer": {
+        "text": "Breathe in. Breathe out.",
+        "links": []
+    },
+    "cardStyle": "blob",
+    "filterLayout": "sidebar-left",
+    "categories": [
+        "Mindfulness",
+        "Sustainability",
+        "Nature",
+        "Design"
+    ]
+}

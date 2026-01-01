@@ -1,0 +1,93 @@
+/* Organic Theme - Earthy & Blobby Style */
+
+.pageWrapper {
+    min-height: 100vh;
+    background-color: #f7f5f2;
+    font-family: 'Gill Sans', sans-serif;
+    color: #2c2925;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    padding: 4rem 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex: 1;
+    width: 100%;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem 0;
+}
+
+.heroTitle {
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: #2c2925;
+    font-family: 'Gill Sans', sans-serif;
+}
+
+.heroSubtitle {
+    display: none;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 3rem;
+    padding: 2rem;
+}
+
+/* Card Overrides */
+.card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: transparent !important;
+    /* Override default card bg */
+    border: none !important;
+    box-shadow: none !important;
+    transition: all 0.5s ease;
+}
+
+.card .image-container {
+    aspect-ratio: 1;
+    width: 100%;
+    border-radius: 50% 50% 40% 60% / 60% 40% 60% 40%;
+    background: #e6e2dd;
+    margin-bottom: 1.5rem;
+    box-shadow: 10px 10px 30px #d1cdc8, -10px -10px 30px #ffffff;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+}
+
+.card:hover .image-container {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    transform: scale(1.02);
+}
+
+.card img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+    transition: all 0.5s ease;
+}
+
+/* Ensure text content has safe padding from the blob edges */
+.card>div:not(.image-container) {
+    padding: 1.5rem;
+    z-index: 2;
+}
+
+.header {
+    padding: 2rem 3rem;
+    background: #f7f5f2;
+    border-bottom: 1px solid #e6e2dd;
+}

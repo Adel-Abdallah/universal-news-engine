@@ -1,42 +1,135 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
+/* Basic reset to prevent FOUC (Flash of Unstyled Content) */
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+    box-sizing: border-box;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+    /* Default background to avoid white flash in dark mode preferences, 
+     though ThemeWrapper will override this locally */
+    background-color: var(--bg, #1a1a1a);
+    color: var(--text, #ffffff);
+    font-family: system-ui, -apple-system, sans-serif;
+    min-height: 100vh;
+}
+
+/* Fix "purple link" flash */
 a {
-  color: inherit;
-  text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+/* Simple Loading Spinner Animation */
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    border-top-color: var(--primary, #3b82f6);
+    animation: spin 1s ease-in-out infinite;
+}
+
+/* ThemeWrapper Static Styles */
+:root {
+    --spacing-unit: 8px;
+}
+
+/* Ensure body doesn't show white bars if wrapper doesn't fill */
+body {
+    background-color: var(--bg);
+}
+
+.universal-theme-root {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: var(--font-main);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+}
+
+/* UniversalCard Hover Effects */
+.universal-card {
+    transition: transform 0.2s;
+}
+
+.universal-card:hover {
+    transform: translateY(-5px);
+}
+
+.universal-card img {
+    transition: transform 0.3s;
+}
+
+.universal-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+.animate-slide-up {
+    animation: slideUp 0.6s ease-out forwards;
+}
+
+/* Apply animations to core elements */
+section {
+    animation: slideUp 0.8s ease-out forwards;
+}
+
+.universal-theme-root>* {
+    /* Stagger children slightly if we could, but for now just animate main container */
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Button Hover Animation */
+button,
+.button-hover-effect {
+    transition: transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+button:active,
+.button-hover-effect:active {
+    transform: scale(0.98);
 }

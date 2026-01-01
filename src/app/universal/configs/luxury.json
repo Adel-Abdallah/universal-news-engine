@@ -1,0 +1,43 @@
+{
+    "id": "luxury",
+    "title": "Luxe Life",
+    "subtitle": "Curated for the elite.",
+    "style": {
+        "colors": {
+            "primary": "#D4AF37",
+            "onPrimary": "#000000",
+            "secondary": "#1A1A1A",
+            "onSecondary": "#FFFFFF",
+            "background": "#050505",
+            "text": "#E5E5E5",
+            "border": "#333333",
+            "cardBg": "#121212"
+        },
+        "typography": {
+            "fontFamily": "Playfair Display, serif",
+            "headingsFamily": "Cinzel, serif"
+        },
+        "shape": {
+            "borderRadius": "0px",
+            "borderWidth": "1px"
+        },
+        "effects": {
+            "shadow": "0 10px 30px rgba(212, 175, 55, 0.1)"
+        }
+    },
+    "features": {
+        "hero": true
+    },
+    "header": {
+        "links": [
+            { "label": "Latest", "href": "/latest" },
+            { "label": "Trending", "href": "/trending" }
+        ],
+        "cartIcon": false
+    },
+    "footer": {
+        "text": "© 2024 Luxe Life Inc.",
+        "links": []
+    },
+    "cardStyle": "bordered"
+}

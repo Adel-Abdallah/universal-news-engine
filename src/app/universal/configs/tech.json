@@ -1,0 +1,60 @@
+{
+    "id": "tech",
+    "title": "Tech Nexus",
+    "subtitle": "The future of technology, today.",
+    "style": {
+        "colors": {
+            "primary": "#00f0ff",
+            "onPrimary": "#000000",
+            "secondary": "#7000ff",
+            "onSecondary": "#ffffff",
+            "background": "#0a0a12",
+            "text": "#e0e0ff",
+            "border": "#1f1f3a",
+            "cardBg": "#13131f"
+        },
+        "typography": {
+            "fontFamily": "Inter, sans-serif",
+            "headingsFamily": "JetBrains Mono, monospace"
+        },
+        "shape": {
+            "borderRadius": "4px",
+            "borderWidth": "1px"
+        },
+        "effects": {
+            "shadow": "0 0 20px rgba(0, 240, 255, 0.1)"
+        }
+    },
+    "features": {
+        "hero": true
+    },
+    "header": {
+        "links": [
+            {
+                "label": "AI",
+                "href": "/ai"
+            },
+            {
+                "label": "Cybersecurity",
+                "href": "/security"
+            },
+            {
+                "label": "Hardware",
+                "href": "/hardware"
+            }
+        ],
+        "cartIcon": true
+    },
+    "footer": {
+        "text": "Tech Nexus © 2024. All systems operational.",
+        "links": []
+    },
+    "cardStyle": "bordered",
+    "filterLayout": "sidebar-right",
+    "categories": [
+        "Artificial Intelligence",
+        "Blockchain",
+        "Quantum Computing",
+        "Space Tech"
+    ]
+}

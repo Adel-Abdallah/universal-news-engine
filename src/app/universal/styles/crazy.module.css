@@ -1,0 +1,135 @@
+/* Crazy Theme - Black & Yellow Aggressive Style */
+
+/* Keyframes for "Coming from Left/Right" */
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes glitch {
+    0% {
+        transform: translate(0);
+    }
+
+    20% {
+        transform: translate(-2px, 2px);
+    }
+
+    40% {
+        transform: translate(-2px, -2px);
+    }
+
+    60% {
+        transform: translate(2px, 2px);
+    }
+
+    80% {
+        transform: translate(2px, -2px);
+    }
+
+    100% {
+        transform: translate(0);
+    }
+}
+
+/* Header Styles - applied when this theme is active */
+.header {
+    background: rgba(0, 0, 0, 0.9) !important;
+    border-bottom: 2px solid var(--primary) !important;
+}
+
+/* Animations Triggered on Load */
+.hero {
+    border-bottom: 4px solid var(--primary) !important;
+    background: repeating-linear-gradient(45deg,
+            #000,
+            #000 10px,
+            #111 10px,
+            #111 20px) !important;
+    animation: slideInLeft 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.heroTitle {
+    text-transform: uppercase;
+    color: var(--primary);
+    text-shadow: 4px 4px 0px #fff;
+    letter-spacing: -2px;
+}
+
+.heroSubtitle {
+    background: var(--primary);
+    color: #000;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+    display: inline-block;
+    transform: skew(-10deg);
+}
+
+.grid {
+    animation: slideInRight 1s ease-out forwards;
+}
+
+/* Button Overrides */
+.button {
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 900;
+    background: var(--primary);
+    color: var(--on-primary);
+    border: 2px solid var(--primary);
+    transition: all 0.1s;
+}
+
+.button:hover {
+    background: var(--secondary) !important;
+    color: var(--on-secondary) !important;
+    border-color: var(--secondary) !important;
+    box-shadow: 8px 8px 0px var(--primary) !important;
+    transform: translate(-4px, -4px) !important;
+}
+
+/* Card Overrides */
+.card {
+    background: var(--card-bg);
+    border: 2px solid var(--border) !important;
+    padding: 1rem;
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.card:hover {
+    transform: scale(1.05) rotate(2deg) !important;
+    z-index: 10;
+    box-shadow: 12px 12px 0px #fff !important;
+    border-color: #fff !important;
+}
+
+.card img {
+    filter: grayscale(100%) contrast(120%);
+    transition: filter 0.3s;
+}
+
+.card:hover img {
+    filter: grayscale(0%) contrast(100%);
+}

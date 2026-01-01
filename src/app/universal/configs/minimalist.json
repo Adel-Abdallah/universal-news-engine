@@ -1,0 +1,55 @@
+{
+    "id": "minimalist",
+    "title": "Pure",
+    "subtitle": "Essential news. Nothing else.",
+    "style": {
+        "colors": {
+            "primary": "#000000",
+            "onPrimary": "#ffffff",
+            "secondary": "#666666",
+            "onSecondary": "#ffffff",
+            "background": "#ffffff",
+            "text": "#111111",
+            "border": "#eeeeee",
+            "cardBg": "#ffffff"
+        },
+        "typography": {
+            "fontFamily": "Helvetica Neue, sans-serif",
+            "headingsFamily": "Helvetica Neue, sans-serif"
+        },
+        "shape": {
+            "borderRadius": "0px",
+            "borderWidth": "0px"
+        },
+        "effects": {
+            "shadow": "none"
+        }
+    },
+    "features": {
+        "hero": false
+    },
+    "header": {
+        "links": [
+            {
+                "label": "Stories",
+                "href": "/stories"
+            },
+            {
+                "label": "About",
+                "href": "/about"
+            }
+        ],
+        "cartIcon": false
+    },
+    "footer": {
+        "text": "Pure.",
+        "links": []
+    },
+    "cardStyle": "minimal",
+    "filterLayout": "top-bar",
+    "categories": [
+        "Design",
+        "Architecture",
+        "Photography"
+    ]
+}
